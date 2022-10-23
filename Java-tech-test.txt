@@ -1,0 +1,33 @@
+luisjavierjn@gmail.com
+
+Problem description: 
+     We have a list of users. Each user has access permission to some resources. 
+     We need to know all authorized users on a given set of resources.
+
+     Please write a class/method that returns a list of users names (String[]).
+     Arguments passed in to the method include: 
+         1. All users (String[]) 
+         2. Resources that these users can access (String[])
+         3. A given set of resources we want to users to access (String[])
+
+Example: 1. We have 3 users "john", "mike", "carson".
+         2. John can access the following resources, "dev", "train"
+         3. Mike can access the following resources, "dev", "qa"
+         4. Carson can access the following resources, "qa", "prod"
+         
+         We want to know which users can access both "qa" and "prod".
+ 
+         We will pass three arguments to your method.
+
+         String[] users = {"john", "mike", "carson"}
+         String[] permissions = {"dev train", "dev qa", "qa prod"} (note that they are space delimited)
+         String[] resources = {"qa", "prod"}
+
+         In this case, your program should return String[] with {"carson"}.
+
+Requirements: 
+          1. Method signature:
+             String[] findAuthorizedUsers(String[] userlist, String[] permissions, String[] resources)
+          2. Make your program work for general scenarios assuming all arguments are valid.
+          3. Return an empty array of string if no user is qualified.
+          4. Write two JUnit test cases for the method findAuthorizedUsers 
